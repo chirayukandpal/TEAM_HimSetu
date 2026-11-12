@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praman-Setu (प्रमाण-सेतु) | AI Pre-Scrutiny & Zero-Typing Layer — Apuni Sarkar & CM Helpline 1905</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Google Fonts: Inter & Noto Sans Devanagari -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ukNavy: '#0f294a',
+            ukNavyDark: '#091b32',
+            ukSaffron: '#ea580c',
+            ukSaffronLight: '#fff7ed',
+            ukEmerald: '#059669',
+            ukEmeraldLight: '#ecfdf5',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans Devanagari', 'sans-serif'],
+            hindi: ['Noto Sans Devanagari', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', 'Noto Sans Devanagari', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    .gov-gradient {
+      background: linear-gradient(135deg, #0f294a 0%, #1e3a8a 100%);
+    }
+    .saffron-strip {
+      background: linear-gradient(90deg, #ea580c 0%, #f97316 50%, #059669 100%);
+      height: 4px;
+    }
+    @keyframes scanline {
+      0% { top: 0%; opacity: 0.9; }
+      50% { top: 92%; opacity: 1; }
+      100% { top: 0%; opacity: 0.9; }
+    }
+    .scanner-beam {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #10b981, #ea580c, transparent);
+      box-shadow: 0 0 12px 2px rgba(16, 185, 129, 0.7);
+      animation: scanline 2s infinite ease-in-out;
+    }
+    .pulse-glow {
+      box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.7);
+      animation: pulse-emerald 2s infinite;
+    }
+    @keyframes pulse-emerald {
+      0% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.6); }
+      70% { box-shadow: 0 0 0 12px rgba(5, 150, 105, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-ukSaffron selection:text-white">
+
+  <!-- TOP ACCESSIBILITY & GOVT BAR -->
+  <div class="bg-ukNavyDark text-slate-200 text-xs border-b border-slate-700/80">
+    <div class="max-w-7xl mx-auto px-4 py-1.5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center space-x-3">
+        <span class="font-semibold text-amber-400 flex items-center gap-1">
+          <i data-lucide="landmark" class="w-3.5 h-3.5"></i>
+          <span data-i18n="gov_uk">उत्तराखण्ड शासन | Government of Uttarakhand</span>
+        </span>
+        <span class="hidden sm:inline text-slate-500">|</span>
+        <span class="hidden sm:inline text-slate-300" data-i18n="itda_tag">ITDA PRAYAS 2026 GovTech Prototype</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="hidden md:inline text-slate-300">Apuni Sarkar (eservices.uk.gov.in) & CM Helpline 1905</span>
+        <div class="flex items-center bg-slate-800/90 rounded p-0.5 border border-slate-600">
+          <button id="langBtnEN" onclick="setLanguage('en')" class="px-2 py-0.5 rounded text-xs font-bold bg-ukSaffron text-white transition">EN</button>
+          <button id="langBtnHI" onclick="setLanguage('hi')" class="px-2 py-0.5 rounded text-xs font-bold text-slate-300 hover:text-white transition">हिन्दी</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="saffron-strip"></div>
+
+  <!-- MAIN PORTAL HEADER -->
+  <header class="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+      <!-- Brand Identity -->
+      <div class="flex items-center space-x-3.5">
+        <div class="w-12 h-12 rounded-xl gov-gradient flex items-center justify-center text-white shadow-md border-2 border-amber-500/40 shrink-0">
+          <i data-lucide="shield-check" class="w-7 h-7 text-amber-400"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-ukNavy">
+              Praman-Setu <span class="text-ukSaffron font-hindi font-bold">(प्रमाण-सेतु)</span>
+            </h1>
+            <span class="bg-amber-100 text-amber-900 border border-amber-300 text-[11px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+              AI Pre-Scrutiny v2.6
+            </span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 font-medium" data-i18n="header_subtitle">
+            AI Document Verification, Zero-Typing OCR & Automated RTS-1905 Escalation Layer
+          </p>
+        </div>
+      </div>
+
+      <!-- Impact Metrics Pill Bar -->
+      <div class="grid grid-cols-3 gap-2 bg-slate-50 p-1.5 rounded-xl border border-slate-200 text-center">
+        <div class="px-2.5 py-1">
+          <div class="text-xs font-bold text-ukEmerald sm:text-sm">-78%</div>
+          <div class="text-[10px] text-slate-500 font-medium" data-i18n="metric_rejections">Desk Rejections</div>
+        </div>
+        <div class="px-2.5 py-1 border-x border-slate-200">
+          <div class="text-xs font-bold text-ukNavy sm:text-sm">30 Sec</div>
+          <div class="text-[10px] text-slate-500 font-medium" data-i18n="metric_patwari">Patwari Scrutiny</div>
+        </div>
+        <div class="px-2.5 py-1">
+          <div class="text-xs font-bold text-ukSaffron sm:text-sm">Zero-Call</div>
+          <div class="text-[10px] text-slate-500 font-medium" data-i18n="metric_1905">1905 RTS Bridge</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4-TAB NAVIGATION BAR -->
+    <div class="bg-ukNavy text-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <nav class="flex overflow-x-auto no-scrollbar -mb-px space-x-1 sm:space-x-2" aria-label="Tabs">
+          <button onclick="switchTab(1)" id="tabBtn1" class="tab-btn group flex items-center gap-2 py-3 px-4 border-b-4 border-ukSaffron bg-white/10 text-white font-semibold text-xs sm:text-sm whitespace-nowrap transition">
+            <span class="w-5 h-5 rounded-full bg-ukSaffron text-white flex items-center justify-center text-xs font-bold">1</span>
+            <i data-lucide="scan-Search" class="w-4 h-4 text-amber-400"></i>
+            <span data-i18n="tab1_title">Citizen Pre-Scrutiny (दस्तावेज़ जाँच)</span>
+          </button>
+
+          <button onclick="switchTab(2)" id="tabBtn2" class="tab-btn group flex items-center gap-2 py-3 px-4 border-b-4 border-transparent text-slate-300 hover:text-white hover:bg-white/5 font-semibold text-xs sm:text-sm whitespace-nowrap transition">
+            <span class="w-5 h-5 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold">2</span>
+            <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400"></i>
+            <span data-i18n="tab2_title">Zero-Typing Form (स्वतः भरा प्रपत्र)</span>
+          </button>
+
+          <button onclick="switchTab(3)" id="tabBtn3" class="tab-btn group flex items-center gap-2 py-3 px-4 border-b-4 border-transparent text-slate-300 hover:text-white hover:bg-white/5 font-semibold text-xs sm:text-sm whitespace-nowrap transition">
+            <span class="w-5 h-5 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold">3</span>
+            <i data-lucide="user-check" class="w-4 h-4 text-sky-400"></i>
+            <span data-i18n="tab3_title">Patwari Co-Pilot (पटवारी डैशबोर्ड)</span>
+          </button>
+
+          <button onclick="switchTab(4)" id="tabBtn4" class="tab-btn group flex items-center gap-2 py-3 px-4 border-b-4 border-transparent text-slate-300 hover:text-white hover:bg-white/5 font-semibold text-xs sm:text-sm whitespace-nowrap transition">
+            <span class="w-5 h-5 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold">4</span>
+            <i data-lucide="siren" class="w-4 h-4 text-rose-400"></i>
+            <span data-i18n="tab4_title">RTS Tracker & 1905 Bridge (सेवा का अधिकार)</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WORKSPACE CONTAINER -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-6">
+
+    <!-- ===================================================================== -->
+    <!-- TAB 1: CITIZEN DOCUMENT PRE-SCRUTINY (STEP 1 OF APUNI SARKAR)         -->
+    <!-- ===================================================================== -->
+    <section id="tabContent1" class="space-y-6">
+      
+      <!-- 10-Second Pitch Judge Demo Bar -->
+      <div class="bg-gradient-to-r from-ukNavy via-slate-900 to-ukNavy rounded-xl p-4 text-white shadow-md border border-amber-500/30">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div class="flex items-start sm:items-center gap-3">
+            <div class="p-2 rounded-lg bg-ukSaffron/20 border border-ukSaffron text-amber-400 shrink-0">
+              <i data-lucide="zap" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="text-[11px] uppercase tracking-wider font-extrabold text-amber-400 block" data-i18n="judge_bar_tag">
+                PRAYAS 2026 Jury Pitch — 1-Click Live Scenarios
+              </span>
+              <h2 class="text-sm sm:text-base font-bold" data-i18n="judge_bar_desc">
+                Test how Praman-Setu catches fatal document errors BEFORE the citizen pays the ₹40CSC/Apuni Sarkar fee:
+              </h2>
+            </div>
+          </div>
+          <div class="flex flex-wrap items-center gap-2.5">
+            <button onclick="runDemoScenario('A')" id="btnScenarioA" class="px-3 py-2 rounded-lg text-xs font-bold bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-400/50 flex items-center gap-1.5 transition shadow-sm">
+              <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400"></i>
+              <span>Scenario A: Blurry + Name Mismatch</span>
+            </button>
+            <button onclick="runDemoScenario('B')" id="btnScenarioB" class="px-3 py-2 rounded-lg text-xs font-bold bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-400/50 flex items-center gap-1.5 transition shadow-sm">
+              <i data-lucide="file-warning" class="w-4 h-4 text-rose-400"></i>
+              <span>Scenario B: Missing ₹30 Police Challan</span>
+            </button>
+            <button onclick="runDemoScenario('C')" id="btnScenarioC" class="px-3.5 py-2 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white border border-emerald-400 flex items-center gap-1.5 transition shadow-md">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+              <span>Scenario C: Happy Path (97% Pass)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Grid: Left (Service & Upload) | Right (AI Scrutiny Engine Output) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left Column (5 Cols): Service Selection + Real Client-Side Canvas Blur Analyzer -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Step 1A: Revenue Service Selector -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+            <div class="flex items-center justify-between mb-3">
+              <label for="serviceSelector" class="text-sm font-bold text-ukNavy flex items-center gap-2">
+                <i data-lucide="Scroll-text" class="w-4 h-4 text-ukSaffron"></i>
+                <span data-i18n="select_service_lbl">1. Select Apuni Sarkar Revenue Service (सेवा चुनें)</span>
+              </label>
+              <span class="text-xs font-semibold text-ukEmerald bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">RTS Act 2011</span>
+            </div>
+
+            <select id="serviceSelector" onchange="handleServiceChange()" class="w-full rounded-lg border-slate-300 bg-slate-50 text-slate-900 font-semibold text-sm p-3 border focus:ring-2 focus:ring-ukNavy focus:outline-none">
+              <option value="domicile">Sthayi Niwas Praman Patra (स्थायी निवास प्रमाण पत्र - Domicile)</option>
+              <option value="caste">Jati Praman Patra (जाति प्रमाण पत्र - Caste Certificate)</option>
+              <option value="character">Charitra Praman Patra (चरित्र प्रमाण पत्र - General Character)</option>
+            </select>
+
+            <!-- Dynamic Statutory Metadata Box -->
+            <div id="serviceRuleCard" class="mt-4 bg-slate-50 rounded-lg p-3.5 border border-slate-200 space-y-2.5">
+              <div class="flex items-center justify-between text-xs">
+                <span class="text-slate-500 font-medium">Statutory User Charge (CSC/e-District):</span>
+                <span id="ruleFee" class="font-bold text-ukNavy bg-white px-2 py-0.5 rounded border">₹40.00</span>
+              </div>
+              <div class="flex items-center justify-between text-xs">
+                <span class="text-slate-500 font-medium">Uttarakhand RTS Act SLA Timeline:</span>
+                <span id="ruleTimeline" class="font-bold text-ukSaffron bg-amber-50 px-2 py-0.5 rounded border border-amber-200">15 Working Days</span>
+              </div>
+              <div class="pt-2 border-t border-slate-200">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Mandatory Pre-Scrutiny Checklist:</div>
+                <ul id="ruleChecklist" class="text-xs text-slate-700 space-y-1 font-medium">
+                  <!-- Populated by JS -->
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 1B: Real Client-Side HTML5 Canvas Blur & Brightness Lab -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="text-sm font-bold text-ukNavy flex items-center gap-2">
+                <i data-lucide="camera" class="w-4 h-4 text-ukEmerald"></i>
+                <span data-i18n="canvas_lab_title">2. Live Client-Side Image Quality & Blur Analyzer</span>
+              </h3>
+              <span class="text-[11px] bg-sky-50 text-sky-800 border border-sky-200 px-2 py-0.5 rounded font-semibold">HTML5 Canvas Laplacian</span>
+            </div>
+            <p class="text-xs text-slate-500 mb-3" data-i18n="canvas_lab_sub">
+              Upload any actual <code class="bg-slate-100 px-1 rounded">.jpg/.png</code> photo or scan from your device. Our offscreen <code class="bg-slate-100 px-1 rounded">&lt;canvas&gt;</code> computes real pixel brightness & Laplacian edge variance in browser memory.
+            </p>
+
+            <label for="realImageUpload" class="cursor-pointer group block border-2 border-dashed border-slate-300 hover:border-ukSaffron rounded-xl p-4 text-center bg-slate-50/70 hover:bg-orange-50/30 transition">
+              <input type="file" id="realImageUpload" accept="image/jpeg,image/png,image/webp" class="hidden" onchange="analyzeUploadedImage(event)" />
+              <div class="w-10 h-10 rounded-full bg-white shadow-sm border border-slate-200 flex items-center justify-center mx-auto mb-2 group-hover:scale-105 transition">
+                <i data-lucide="upload-cloud" class="w-5 h-5 text-ukSaffron"></i>
+              </div>
+              <div class="text-xs font-bold text-ukNavy" data-i18n="upload_prompt">Click to Upload Real Document Scan (.JPG / .PNG)</div>
+              <div class="text-[11px] text-slate-500 mt-0.5">Zero Server Upload — 100% Client-Side Edge Compute</div>
+            </label>
+
+            <!-- Offscreen Canvas for real Laplacian Variance & Luminance calculation -->
+            <canvas id="offscreenCanvas" class="hidden"></canvas>
+
+            <!-- Live Uploaded Image Diagnostics Result Box -->
+            <div id="liveUploadResult" class="hidden mt-4 p-3.5 rounded-lg border bg-slate-50 space-y-2.5">
+              <div class="flex items-center gap-3">
+                <img id="uploadedPreviewThumb" src="" alt="Preview" class="w-14 h-14 object-cover rounded border border-slate-300 bg-white shrink-0" />
+                <div class="flex-1 min-w-0">
+                  <div id="uploadedFileName" class="text-xs font-bold text-slate-800 truncate">document.jpg</div>
+                  <div class="grid grid-cols-2 gap-2 mt-1.5">
+                    <div class="bg-white p-1.5 rounded border border-slate-200">
+                      <span class="text-[10px] text-slate-500 block">Laplacian Sharpness</span>
+                      <span id="realSharpnessVal" class="text-xs font-extrabold text-ukNavy">--</span>
+                    </div>
+                    <div class="bg-white p-1.5 rounded border border-slate-200">
+                      <span class="text-[10px] text-slate-500 block">Pixel Luminance</span>
+                      <span id="realBrightnessVal" class="text-xs font-extrabold text-ukNavy">--</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="realImageVerdict" class="text-xs font-semibold px-2.5 py-1.5 rounded flex items-center gap-1.5"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column (7 Cols): AI Document Audit & Cross-Document Entity Resolution -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 relative overflow-hidden">
+            
+            <!-- Top Status Header -->
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-slate-200">
+              <div>
+                <h3 class="text-base font-extrabold text-ukNavy flex items-center gap-2">
+                  <i data-lucide="cpu" class="w-5 h-5 text-ukSaffron"></i>
+                  <span data-i18n="audit_panel_title">Praman-Setu AI Pre-Scrutiny Engine</span>
+                </h3>
+                <p class="text-xs text-slate-500" data-i18n="audit_panel_sub">
+                  Cross-verifies OCR entities across Parivar Register, Identity Proof & Revenue Khatauni
+                </p>
+              </div>
+              <div id="overallAuditBadge" class="px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1.5">
+                <i data-lucide="alert-circle" class="w-4 h-4"></i>
+                <span>Action Required Before Payment</span>
+              </div>
+            </div>
+
+            <!-- AI Audit Progress Bar (Visible during scanning animation) -->
+            <div id="auditProgressContainer" class="hidden my-4 bg-slate-900 text-white p-4 rounded-xl border border-slate-700">
+              <div class="flex items-center justify-between text-xs font-bold mb-2">
+                <span class="flex items-center gap-2 text-emerald-400">
+                  <i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i>
+                  <span id="auditProgressText">Running Devanagari OCR & Entity Resolution...</span>
+                </span>
+                <span id="auditProgressPct" class="text-amber-400">0%</span>
+              </div>
+              <div class="w-full bg-slate-700 h-2.5 rounded-full overflow-hidden">
+                <div id="auditProgressBar" class="bg-gradient-to-r from-ukSaffron to-ukEmerald h-full transition-all duration-150" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <!-- 3 Document Audit Cards -->
+            <div id="documentCardsContainer" class="mt-4 space-y-3">
+              <!-- Populated dynamically by scenario / service -->
+            </div>
+
+            <!-- Cross-Document Entity Match Matrix -->
+            <div class="mt-5 pt-4 border-t border-slate-200">
+              <div class="flex items-center justify-between mb-2.5">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
+                  <i data-lucide="git-compare" class="w-4 h-4 text-ukNavy"></i>
+                  <span data-i18n="entity_matrix_title">Cross-Document Entity & Statutory Compliance Check</span>
+                </h4>
+                <span id="entityConfidenceBadge" class="text-xs font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+                  Entity Match: 64% (Mismatch Detected)
+                </span>
+              </div>
+
+              <div id="entityComparisonBox" class="bg-slate-50 rounded-lg border border-slate-200 p-3.5 space-y-2.5 text-xs">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <!-- Inline Remediation / Action Footer -->
+            <div id="remediationBox" class="mt-5 p-4 rounded-xl border-2 border-amber-400 bg-amber-50/90 text-amber-950 space-y-3">
+              <!-- Populated by JS -->
+            </div>
+
+            <!-- Bottom Proceed CTA -->
+            <div class="mt-5 pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div class="text-xs text-slate-500 flex items-center gap-1.5">
+                <i data-lucide="lock" class="w-4 h-4 text-slate-400"></i>
+                <span id="feeGateStatusText">₹40 Apuni Sarkar Fee Payment Locked to prevent citizen money loss.</span>
+              </div>
+
+              <button id="btnProceedTab2" onclick="switchTab(2)" disabled class="w-full sm:w-auto px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition bg-slate-200 text-slate-500 cursor-not-allowed">
+                <span>Proceed to Zero-Typing Auto-Filled Form</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- TAB 2: ZERO-TYPING AUTO-FILLED FORM (STEP 2 OF APUNI SARKAR)          -->
+    <!-- ===================================================================== -->
+    <section id="tabContent2" class="hidden space-y-6">
+      
+      <!-- Top Banner: Zero-Typing OCR Value Proposition -->
+      <div class="bg-emerald-950 text-white rounded-xl p-4 shadow-md border border-emerald-700 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/20 border border-emerald-400 flex items-center justify-center text-emerald-300 shrink-0">
+            <i data-lucide="wand-2" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider bg-emerald-500 text-emerald-950 px-2 py-0.5 rounded">Zero-Typing Mode Active</span>
+              <span class="text-xs text-emerald-300 font-medium">100% Bilingual Devanagari + English Auto-Fill</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-bold mt-0.5" data-i18n="tab2_banner_heading">
+              Apuni Sarkar Step 2 — Auto-Populated from Verified Documents in 1.2 Seconds
+            </h2>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 self-end md:self-center">
+          <button onclick="toggleAllFormFields()" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-white/10 hover:bg-white/20 text-white border border-white/20 flex items-center gap-1.5 transition">
+            <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+            <span id="globalEditBtnText">Unlock All Fields to Edit</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left 8 Cols: Auto-Filled Bilingual Form -->
+        <div class="lg:col-span-8 bg-white rounded-xl shadow-sm border border-slate-200 p-5 sm:p-6">
+          <div class="flex items-center justify-between pb-4 mb-5 border-b border-slate-200">
+            <div>
+              <span class="text-xs font-bold text-ukSaffron uppercase tracking-wider">Form UK-REV-01 (स्थायी निवास / राजस्व प्रपत्र)</span>
+              <h3 class="text-lg font-extrabold text-ukNavy">Applicant & Family Details (आवेदक का विवरण)</h3>
+            </div>
+            <span class="text-xs bg-emerald-50 text-ukEmerald font-bold px-2.5 py-1 rounded-md border border-emerald-200 flex items-center gap-1">
+              <i data-lucide="check-check" class="w-4 h-4"></i>
+              8/8 Fields OCR Populated
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Field 1: Applicant Name (English) -->
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between mb-1">
+                <label class="text-xs font-bold text-slate-700">Applicant Full Name (English)</label>
+                <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded flex items-center gap-1">
+                  <i data-lucide="cpu" class="w-3 h-3"></i> Auto-Extracted via Praman-Setu OCR
+                </span>
+              </div>
+              <div class="flex items-center gap-2 mt-1">
+                <input type="text" id="field_name_en" value="Ramesh Singh" readonly class="ocr-input w-full bg-white text-slate-900 font-bold text-sm px-3 py-2 rounded border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ukNavy read-only:bg-slate-100/80" />
+                <button type="button" onclick="toggleSingleField('field_name_en')" class="px-2 py-2 text-xs font-semibold text-ukNavy hover:text-ukSaffron border border-slate-200 rounded bg-white" title="Edit Field">
+                  <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Field 2: Applicant Name (Hindi Devanagari) -->
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between mb-1">
+                <label class="text-xs font-bold text-slate-700">आवेदक का नाम (हिन्दी यूनिकोड)</label>
+                <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded flex items-center gap-1">
+                  <i data-lucide="cpu" class="w-3 h-3"></i> Auto-Extracted via Praman-Setu OCR
+                </span>
+              </div>
+              <div class="flex items-center gap-2 mt-1">
+                <input type="text" id="field_name_hi" value="रमेश सिंह" readonly class="ocr-input font-hindi w-full bg-white text-slate-900 font-bold text-sm px-3 py-2 rounded border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ukNavy read-only:bg-slate-100/80" />
+                <button type="button" onclick="toggleSingleField('field_name_hi')" class="px-2 py-2 text-xs font-semibold text-ukNavy hover:text-ukSaffron border border-slate-200 rounded bg-white" title="Edit Field">
+                  <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Field 3: Father's Name (English & Hindi) -->
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between mb-1">
+                <label class="text-xs font-bold text-slate-700">Father's / Guardian's Name (पिता का नाम)</label>
+                <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded flex items-center gap-1">
+                  <i data-lucide="cpu" class="w-3 h-3"></i> Auto-Extracted via Praman-Setu OCR
+                </span>
+              </div>
+              <div class="flex items-center gap-2 mt-1">
+                <input type="text" id="field_father" value="Mohan Singh (मोहन सिंह)" readonly class="ocr-input w-full bg-white text-slate-900 font-bold text-sm px-3 py-2 rounded border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ukNavy read-only:bg-slate-100/80" />
+                <button type="button" onclick="toggleSingleField('field_father')" class="px-2 py-2 text-xs font-semibold text-ukNavy hover:text-ukSaffron border border-slate-200 rounded bg-white" title="Edit Field">
+                  <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Field 4: Date of Birth -->
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between mb-1">
+                <label class="text-xs font-bold text-slate-700">Date of Birth (जन्म तिथि)</label>
+                <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded flex items-center gap-1">
+                  <i data-lucide="cpu" class="w-3 h-3"></i> Auto-Extracted via Praman-Setu OCR
+                </span>
+              </div>
+              <div class="flex items-center gap-2 mt-1">
+                <input type="date" id="field_dob" value="1988-07-15" readonly class="ocr-input w-full bg-white text-slate-900 font-bold text-sm px-3 py-2 rounded border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ukNavy read-only:bg-slate-100/80" />
+                <button type="button" onclick="toggleSingleField('field_dob')" class="px-2 py-2 text-xs font-semibold text-ukNavy hover:text-ukSaffron border border-slate-200 rounded bg-white" title="Edit Field">
+                  <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Field 5: Identity Reference Status (Privacy Masked Placeholder) -->
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between mb-1">
+                <label class="text-xs font-bold text-slate-700">Identity Vault Reference (पहचान संदर्भ)</label>
+                <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded flex items-center gap-1">
+                  <i data-lucide="shield" class="w-3 h-3"></i> Privacy Redacted
+                </span>
+              </div>
+              <div class="flex items-center gap-2 mt-1">
+                <input type="text" id="field_id_ref" value="[Aadhaar Redacted - Verified via Vault Token]" readonly class="w-full bg-slate-100 text-slate-700 font-mono font-bold text-xs px-3 py-2.5 rounded border border-slate-300 cursor-not-allowed" />
+              </div>
+            </div>
+
+            <!-- Field 6: Parivar Register Nakal Serial -->
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="flex items-center justify-between mb-1">
+                <label class="text-xs font-bold text-slate-700">Parivar Register Family ID (परिवार रजिस्टर संख्या)</label>
+                <span class="text-[10px] font-bold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded flex items-center gap-1">
+                  <i data-lucide="cpu" class="w-3 h-3"></i> Auto-Extracted via Praman-Setu OCR
+                </span>
+              </div>
+              <div class="flex items-center gap-2 mt-1">
+                <input type="text" id="field_parivar" value="PR-DDN-VKN-0942/B" readonly class="ocr-input w-full bg-white text-slate-900 font-bold text-sm px-3 py-2 rounded border border-slate-300 focus:outline-none focus:ring-2 focus:ring-ukNavy read-only:bg-slate-100/80" />
+                <button type="button" onclick="toggleSingleField('field_parivar')" class="px-2 py-2 text-xs font-semibold text-ukNavy hover:text-ukSaffron border border-slate-200 rounded bg-white" title="Edit Field">
+                  <i data-lucide="pencil" class="w-3.5 h-3.5"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Submit & Pay ₹40 Fee CTA -->
+          <div class="mt-6 pt-5 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-lg bg-amber-100 border border-amber-300 flex items-center justify-center text-ukSaffron font-extrabold text-sm">
+                ₹40
+              </div>
+              <div class="text-xs">
+                <div class="font-bold text-slate-800">Apuni Sarkar Statutory Service Fee</div>
+                <div class="text-slate-500">Zero risk of clerical rejection — Pre-Scrutiny Certificate attached</div>
+              </div>
+            </div>
+
+            <button onclick="submitApplicationAndPay()" class="w-full sm:w-auto px-6 py-3 rounded-xl font-extrabold text-sm bg-ukSaffron hover:bg-orange-700 text-white shadow-lg flex items-center justify-center gap-2 transition pulse-glow">
+              <i data-lucide="check-circle" class="w-4 h-4"></i>
+              <span>Submit Application & Pay ₹40 Fee</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right 4 Cols: Jurisdiction Auto-Lock Engine -->
+        <div class="lg:col-span-4 space-y-5">
+          <div class="bg-ukNavy text-white rounded-xl p-5 shadow-md border border-slate-700">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider bg-amber-400 text-slate-950 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                <i data-lucide="lock" class="w-3 h-3"></i> Jurisdiction Auto-Lock
+              </span>
+              <span class="text-xs text-emerald-400 font-semibold">Bhulekh Geo-Verified</span>
+            </div>
+
+            <h4 class="text-base font-bold mb-1">Zero Wrong-Tehsil Rejections</h4>
+            <p class="text-xs text-slate-300 leading-relaxed mb-4">
+              In Apuni Sarkar, 19% of rejections happen because citizens accidentally route their form to the wrong Patwari Halka or Tehsil. Praman-Setu auto-locks jurisdiction directly from Khatauni Khasra metadata.
+            </p>
+
+            <div class="bg-slate-800/90 rounded-lg p-3.5 border border-slate-700 space-y-2.5 text-xs">
+              <div class="flex justify-between items-center py-1 border-b border-slate-700">
+                <span class="text-slate-400">District (जनपद):</span>
+                <span class="font-bold text-white flex items-center gap-1">
+                  Dehradun (देहरादून) <i data-lucide="lock" class="w-3 h-3 text-amber-400"></i>
+                </span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-700">
+                <span class="text-slate-400">Tehsil (तहसील):</span>
+                <span class="font-bold text-white flex items-center gap-1">
+                  Vikasnagar (विकासनगर) <i data-lucide="lock" class="w-3 h-3 text-amber-400"></i>
+                </span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-700">
+                <span class="text-slate-400">Village / Town (ग्राम):</span>
+                <span class="font-bold text-white flex items-center gap-1">
+                  Herbertpur (हरबर्टपुर) <i data-lucide="lock" class="w-3 h-3 text-amber-400"></i>
+                </span>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <span class="text-slate-400">Patwari Halka (पटवारी क्षेत्र):</span>
+                <span class="font-bold text-emerald-400 flex items-center gap-1">
+                  Circle 04 - Herbertpur <i data-lucide="check-circle-2" class="w-3.5 h-3.5"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="mt-4 p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-[11px] text-emerald-200 flex items-start gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Matched with Bhulekh Uttarakhand Khatauni Account No. <strong>00142 (Khasra 418/2)</strong> — Continuous Residence: <strong>24 Years</strong>.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- TAB 3: PATWARI / TEHSILDAR CO-PILOT DASHBOARD (OFFICER VIEW)          -->
+    <!-- ===================================================================== -->
+    <section id="tabContent3" class="hidden space-y-6">
+      
+      <!-- Officer Header Bar -->
+      <div class="bg-white rounded-xl p-4 shadow-sm border border-slate-200 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl bg-ukNavy text-white flex items-center justify-center font-extrabold text-lg shadow">
+            <i data-lucide="badge-check" class="w-6 h-6 text-amber-400"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-xs font-bold uppercase tracking-wider text-ukSaffron">Lekhpal / Patwari Desk — Halka Herbertpur-04</span>
+              <span class="text-[11px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Average Review Time: 28 Sec (Down from 6 Min)</span>
+            </div>
+            <h2 class="text-base sm:text-lg font-extrabold text-ukNavy">
+              Application File: <span id="officerAppId" class="font-mono text-ukSaffron">UK-ES-2026-884921</span> — Sthayi Niwas Praman Patra
+            </h2>
+          </div>
+        </div>
+
+        <!-- AI Scrutiny Confidence Scorecard Pill -->
+        <div class="flex items-center gap-4 bg-emerald-50 border border-emerald-300 px-4 py-2.5 rounded-xl">
+          <div>
+            <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-800">AI Scrutiny Confidence Scorecard</div>
+            <div class="text-xl font-extrabold text-ukEmerald">98.4% <span class="text-xs font-semibold text-emerald-700">(High Trust — Pre-Verified)</span></div>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-ukEmerald text-white flex items-center justify-center font-bold">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Officer Side-by-Side Comparison Table & Cropped Visual Highlight Zones -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left 7 Cols: Side-by-Side Entity Comparison Matrix -->
+        <div class="lg:col-span-7 bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+          <h3 class="text-sm font-extrabold text-ukNavy mb-3 flex items-center gap-2">
+            <i data-lucide="columns" class="w-4 h-4 text-ukSaffron"></i>
+            <span>3-Document Cross-Verification Table (आधार बनाम परिवार रजिस्टर बनाम खतौनी)</span>
+          </h3>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="bg-slate-100 text-slate-700 border-b border-slate-200">
+                  <th class="p-2.5 font-bold">Parameter</th>
+                  <th class="p-2.5 font-bold">Identity Proof (Vault)</th>
+                  <th class="p-2.5 font-bold">Parivar Register Nakal</th>
+                  <th class="p-2.5 font-bold">Bhulekh Khatauni</th>
+                  <th class="p-2.5 font-bold text-center">AI Match</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 font-medium">
+                <tr>
+                  <td class="p-2.5 font-bold text-slate-800">Applicant Name</td>
+                  <td class="p-2.5">Ramesh Singh (रमेश सिंह)</td>
+                  <td class="p-2.5">रमेश सिंह (Ramesh Singh)</td>
+                  <td class="p-2.5">रमेश सिंह पुत्र मोहन सिंह</td>
+                  <td class="p-2.5 text-center">
+                    <span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">100% Exact</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-bold text-slate-800">Father's Name</td>
+                  <td class="p-2.5">Mohan Singh</td>
+                  <td class="p-2.5">मोहन सिंह (Mohan Singh)</td>
+                  <td class="p-2.5">मोहन सिंह</td>
+                  <td class="p-2.5 text-center">
+                    <span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">100% Exact</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-bold text-slate-800">Village / Tehsil</td>
+                  <td class="p-2.5">Herbertpur, Vikasnagar</td>
+                  <td class="p-2.5">ग्राम हरबर्टपुर, विकासनगर</td>
+                  <td class="p-2.5">मौजा हरबर्टपुर, खसरा 418/2</td>
+                  <td class="p-2.5 text-center">
+                    <span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">Geo-Locked</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-2.5 font-bold text-slate-800">15-Yr Domicile Proof</td>
+                  <td class="p-2.5 text-slate-500">Identity Token Verified</td>
+                  <td class="p-2.5">Birth Entry: 15-07-1988</td>
+                  <td class="p-2.5">Fasli Year 1409–1430 (24 Yrs)</td>
+                  <td class="p-2.5 text-center">
+                    <span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">Rule Passed</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Auto-Generated Draft Patwari Report in Hindi -->
+          <div class="mt-4 p-3.5 rounded-lg bg-slate-50 border border-slate-200">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-ukNavy">Auto-Drafted Patwari Scrutiny Note (पटवारी आख्या प्रारूप)</span>
+              <span class="text-[10px] bg-sky-100 text-sky-800 font-bold px-2 py-0.5 rounded">Ready for e-Sign</span>
+            </div>
+            <p class="font-hindi text-xs text-slate-800 leading-relaxed bg-white p-2.5 rounded border border-slate-200">
+              "प्रमाण-सेतु एआई एवं भूलेख खतौनी मिलान के आधार पर आवेदक <strong>श्री रमेश सिंह पुत्र श्री मोहन सिंह</strong>, निवासी ग्राम हरबर्टपुर, तहसील विकासनगर, जनपद देहरादून विगत 24 वर्षों (न्यूनतम 15 वर्ष के मानक से अधिक) से उत्तराखण्ड के स्थायी निवासी हैं। परिवार रजिस्टर नकल एवं खतौनी खाता संख्या 00142 से पुष्टि की गई। स्थायी निवास प्रमाण पत्र निर्गत करने की संस्तुति की जाती है।"
+            </p>
+          </div>
+        </div>
+
+        <!-- Right 5 Cols: Cropped Visual Highlight Zones + 1-Click Approval -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 space-y-3.5">
+            <h3 class="text-sm font-extrabold text-ukNavy flex items-center gap-2">
+              <i data-lucide="crop" class="w-4 h-4 text-ukEmerald"></i>
+              <span>AI Cropped Visual Highlight Zones (Zero Zooming/Scrolling)</span>
+            </h3>
+            <p class="text-xs text-slate-500">
+              Instead of opening 3 heavy PDF attachments, Praman-Setu crops the exact Region-of-Interest (ROI) bounding boxes for instant visual inspection:
+            </p>
+
+            <!-- ROI Crop 1 -->
+            <div class="p-3 rounded-lg bg-slate-900 text-white border border-slate-700 relative overflow-hidden">
+              <div class="flex justify-between items-center text-[10px] text-emerald-400 font-mono mb-1">
+                <span>ROI #1: PARIVAR REGISTER NAKAL (BBOX: [142, 310, 480, 72])</span>
+                <span>SHARPNESS: 96%</span>
+              </div>
+              <div class="bg-amber-50/95 text-slate-900 p-2.5 rounded border-2 border-emerald-500 font-hindi text-xs shadow-inner">
+                <div class="flex justify-between border-b border-slate-300 pb-1 mb-1 text-[10px] text-slate-600">
+                  <span>ग्राम पंचायत: हरबर्टपुर (विकासनगर)</span>
+                  <span>परिवार संख्या: 0942/B</span>
+                </div>
+                <div class="font-bold text-sm text-ukNavy">
+                  क्र०सं० 03 | मुखिया/सदस्य: <span class="bg-emerald-200 px-1 rounded">रमेश सिंह</span> | पिता: <span class="bg-emerald-200 px-1 rounded">मोहन सिंह</span> | जन्म: 15/07/1988
+                </div>
+              </div>
+            </div>
+
+            <!-- ROI Crop 2 -->
+            <div class="p-3 rounded-lg bg-slate-900 text-white border border-slate-700 relative overflow-hidden">
+              <div class="flex justify-between items-center text-[10px] text-amber-400 font-mono mb-1">
+                <span>ROI #2: BHULEKH KHATAUNI FASLI 1409-1430 (BBOX: [88, 512, 460, 68])</span>
+                <span>RESIDENCE: 24 YRS</span>
+              </div>
+              <div class="bg-white text-slate-900 p-2.5 rounded border-2 border-amber-500 font-hindi text-xs shadow-inner">
+                <div class="flex justify-between border-b border-slate-300 pb-1 mb-1 text-[10px] text-slate-600">
+                  <span>खाता खतौनी क्रम: 00142</span>
+                  <span>फसली वर्ष: 1409 से 1430 (सत्यापित)</span>
+                </div>
+                <div class="font-bold text-sm text-ukNavy">
+                  खातेदार: <span class="bg-amber-200 px-1 rounded">मोहन सिंह / रमेश सिंह</span> | खसरा: 418/2 (0.2450 हे०)
+                </div>
+              </div>
+            </div>
+
+            <!-- 1-Click Officer Action Buttons -->
+            <div class="pt-3 border-t border-slate-200 space-y-2.5">
+              <button id="btnPatwariApprove" onclick="approveAndForwardPatwari()" class="w-full py-3 px-4 rounded-xl font-extrabold text-sm bg-ukEmerald hover:bg-emerald-700 text-white shadow-md flex items-center justify-center gap-2 transition">
+                <i data-lucide="file-check-2" class="w-5 h-5"></i>
+                <span>1-Click Approve & Forward to Tehsildar (e-Sign)</span>
+              </button>
+              <div id="patwariApprovedBanner" class="hidden p-3 rounded-lg bg-emerald-50 border border-emerald-300 text-emerald-900 text-xs font-bold flex items-center justify-between">
+                <span class="flex items-center gap-1.5">
+                  <i data-lucide="check-circle-2" class="w-4 h-4 text-ukEmerald"></i>
+                  Forwarded to Tehsildar Desk with Digital Signature!
+                </span>
+                <button onclick="switchTab(4)" class="underline text-ukNavy hover:text-ukSaffron">View RTS Tracker →</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- TAB 4: LIVE RTS TRACKER & CM HELPLINE 1905 AUTO-ESCALATION BRIDGE     -->
+    <!-- ===================================================================== -->
+    <section id="tabContent4" class="hidden space-y-6">
+      
+      <!-- Top SLA Status & Simulation Toggle Bar -->
+      <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 pb-5 border-b border-slate-200">
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-xs font-extrabold uppercase tracking-wider text-ukNavy bg-slate-100 px-2.5 py-0.5 rounded border border-slate-300">
+                Uttarakhand Right to Service (RTS) Act, 2011
+              </span>
+              <span id="rtsSlaBadge" class="text-xs font-extrabold px-3 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-300 flex items-center gap-1 animate-pulse">
+                <i data-lucide="flame" class="w-3.5 h-3.5"></i>
+                Day 16 of 15 — RTS SLA Breached (1 Day Overdue)
+              </span>
+            </div>
+            <h2 class="text-lg sm:text-xl font-extrabold text-ukNavy mt-1.5">
+              Live Application Tracker: <span id="trackerAppId" class="font-mono text-ukSaffron">UK-ES-2026-884921</span>
+            </h2>
+            <p class="text-xs text-slate-500">
+              Applicant: <strong>Ramesh Singh (रमेश सिंह)</strong> | Service: <strong>Sthayi Niwas Praman Patra</strong> | Tehsil: <strong>Vikasnagar</strong>
+            </p>
+          </div>
+
+          <!-- Toggle between SLA Breached Demo vs Newly Submitted Demo -->
+          <div class="flex flex-wrap items-center gap-2">
+            <button onclick="setRtsDemoMode('breached')" id="btnRtsBreached" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-rose-600 text-white shadow-sm flex items-center gap-1.5">
+              <i data-lucide="clock-alert" class="w-3.5 h-3.5"></i>
+              <span>Simulate Day 16 (SLA Breached)</span>
+            </button>
+            <button onclick="setRtsDemoMode('ontime')" id="btnRtsOntime" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-300 flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5 text-ukEmerald"></i>
+              <span>Simulate Day 2 (On-Track)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4-Stage Visual Step-by-Step Progress Tracker -->
+        <div class="py-6">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            
+            <!-- Step 1: Submitted -->
+            <div class="p-4 rounded-xl bg-emerald-50/70 border-2 border-ukEmerald relative">
+              <div class="flex items-center justify-between mb-2">
+                <span class="w-7 h-7 rounded-full bg-ukEmerald text-white font-bold text-xs flex items-center justify-center">✓</span>
+                <span class="text-[11px] font-bold text-ukEmerald">Day 1 • Completed</span>
+              </div>
+              <h4 class="text-sm font-extrabold text-ukNavy">1. Citizen Submission</h4>
+              <p class="text-xs text-slate-600 mt-1">Praman-Setu AI Pre-Scrutiny Passed (97% Clarity). Fee ₹40 Paid.</p>
+            </div>
+
+            <!-- Step 2: Patwari Report -->
+            <div class="p-4 rounded-xl bg-emerald-50/70 border-2 border-ukEmerald relative">
+              <div class="flex items-center justify-between mb-2">
+                <span class="w-7 h-7 rounded-full bg-ukEmerald text-white font-bold text-xs flex items-center justify-center">✓</span>
+                <span class="text-[11px] font-bold text-ukEmerald">Day 3 • Completed</span>
+              </div>
+              <h4 class="text-sm font-extrabold text-ukNavy">2. Patwari Report</h4>
+              <p class="text-xs text-slate-600 mt-1">Halka Herbertpur-04 verified 24-yr Khatauni & forwarded.</p>
+            </div>
+
+            <!-- Step 3: Kanungo Verification (Bottleneck in Breached Mode) -->
+            <div id="step3Card" class="p-4 rounded-xl bg-rose-50 border-2 border-rose-500 relative shadow-sm">
+              <div class="flex items-center justify-between mb-2">
+                <span id="step3Icon" class="w-7 h-7 rounded-full bg-rose-600 text-white font-bold text-xs flex items-center justify-center">!</span>
+                <span id="step3Badge" class="text-[11px] font-extrabold text-rose-700 bg-rose-100 px-2 py-0.5 rounded">Pending 13 Days (SLA Breach)</span>
+              </div>
+              <h4 class="text-sm font-extrabold text-ukNavy">3. Revenue Inspector (Kanungo)</h4>
+              <p id="step3Desc" class="text-xs text-rose-900 font-medium mt-1">File stuck at Kanungo Circle Vikasnagar Desk beyond 15-day statutory limit.</p>
+            </div>
+
+            <!-- Step 4: Tehsildar Digital Sign -->
+            <div class="p-4 rounded-xl bg-slate-50 border-2 border-slate-200 opacity-75">
+              <div class="flex items-center justify-between mb-2">
+                <span class="w-7 h-7 rounded-full bg-slate-300 text-slate-700 font-bold text-xs flex items-center justify-center">4</span>
+                <span class="text-[11px] font-semibold text-slate-500">Awaiting Step 3</span>
+              </div>
+              <h4 class="text-sm font-extrabold text-slate-700">4. Tehsildar Digital Sign</h4>
+              <p class="text-xs text-slate-500 mt-1">Auto-dispatches signed certificate to DigiLocker & WhatsApp.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CM Helpline 1905 Auto-Escalation Bridge Card -->
+        <div class="bg-gradient-to-r from-ukNavy via-slate-900 to-ukNavy text-white rounded-xl p-5 border border-amber-500/40 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5">
+          <div class="space-y-1.5 max-w-2xl">
+            <div class="flex items-center gap-2">
+              <span class="bg-ukSaffron text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded uppercase tracking-wider">CM Helpline 1905 Bridge (Option 4 — RTS Breach)</span>
+              <span class="text-xs text-amber-300 font-semibold">Zero IVR Wait • Zero Manual Explanation</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-extrabold">
+              Automated Right-to-Service Grievance Escalation to CM Helpline 1905
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Citizens currently dial 1905 and spend 8+ minutes verbally dictating their 16-digit Apuni Sarkar Application ID and Tehsil details. Praman-Setu bridges Apuni Sarkar directly to the 1905 RTS Escalation API with pre-attached SLA breach telemetry.
+            </p>
+          </div>
+
+          <div class="w-full lg:w-auto shrink-0">
+            <button onclick="open1905Modal()" class="w-full lg:w-auto px-5 py-3.5 rounded-xl font-extrabold text-xs sm:text-sm bg-ukSaffron hover:bg-orange-600 text-white shadow-lg flex items-center justify-center gap-2.5 transition border border-amber-300/40">
+              <i data-lucide="phone-forwarded" class="w-5 h-5"></i>
+              <span>1-Click Escalate to CM Helpline 1905 (Option 4)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Active 1905 Ticket Confirmation Card (Hidden until generated in Modal) -->
+        <div id="generated1905TicketBox" class="hidden mt-5 p-4 rounded-xl bg-emerald-50 border-2 border-ukEmerald text-emerald-950 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-xl bg-ukEmerald text-white flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="shield-alert" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-extrabold uppercase tracking-wider text-ukEmerald">CM Helpline 1905 RTS Grievance Registered Automatically</div>
+              <div class="text-sm sm:text-base font-extrabold text-ukNavy mt-0.5">
+                Grievance Ticket ID: <span class="font-mono text-ukSaffron bg-white px-2 py-0.5 rounded border border-amber-300">1905-UK-2026-44109</span>
+              </div>
+              <p class="text-xs text-slate-600 mt-1">
+                Notice dispatched to <strong>SDM Vikasnagar (Designated First Appellate Officer under Uttarakhand RTS Act)</strong> with 48-hour auto-resolution directive.
+              </p>
+            </div>
+          </div>
+          <span class="text-xs font-bold bg-white text-ukEmerald px-3 py-1.5 rounded-lg border border-emerald-300 shrink-0">
+            SMS Sent to Citizen
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL: CM HELPLINE 1905 AUTO-ESCALATION PAYLOAD PREVIEW               -->
+  <!-- ===================================================================== -->
+  <div id="modal1905" class="fixed inset-0 z-50 hidden bg-slate-900/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+      <div class="gov-gradient text-white p-4 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-lg bg-ukSaffron flex items-center justify-center text-white font-bold">
+            1905
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-extrabold">CM Helpline 1905 — Option 4 Auto-Escalation</h3>
+            <p class="text-[11px] text-amber-300">Direct API Payload from Apuni Sarkar RTS Engine</p>
+          </div>
+        </div>
+        <button onclick="close1905Modal()" class="text-slate-300 hover:text-white p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-5 space-y-4 text-xs">
+        <div class="p-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-950 font-medium">
+          Zero phone call needed. The following verified RTS breach packet is auto-populated and ready for instant registration on <strong>cmhelpline.uk.gov.in</strong>:
+        </div>
+
+        <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 space-y-2">
+          <div class="flex justify-between py-1 border-b border-slate-200">
+            <span class="text-slate-500">Apuni Sarkar Application ID:</span>
+            <span id="modalAppId" class="font-mono font-bold text-ukNavy">UK-ES-2026-884921</span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-slate-200">
+            <span class="text-slate-500">Service & Statutory Act:</span>
+            <span class="font-bold text-slate-800">Domicile Certificate (RTS SLA: 15 Days)</span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-slate-200">
+            <span class="text-slate-500">Current Days Elapsed:</span>
+            <span class="font-extrabold text-rose-600">16 Working Days (1 Day Overdue)</span>
+          </div>
+          <div class="flex justify-between py-1 border-b border-slate-200">
+            <span class="text-slate-500">Bottleneck Officer Desk:</span>
+            <span class="font-bold text-ukNavy">Revenue Inspector (Kanungo) — Vikasnagar</span>
+          </div>
+          <div class="flex justify-between py-1">
+            <span class="text-slate-500">First Appellate Authority:</span>
+            <span class="font-bold text-ukEmerald">Sub-Divisional Magistrate (SDM), Vikasnagar</span>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-end gap-2.5 pt-2">
+          <button onclick="close1905Modal()" class="px-4 py-2.5 rounded-xl font-bold text-slate-600 hover:bg-slate-100">
+            Cancel
+          </button>
+          <button onclick="confirm1905Ticket()" class="px-5 py-2.5 rounded-xl font-extrabold bg-ukSaffron hover:bg-orange-700 text-white shadow-md flex items-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Generate Instant 1905 Ticket</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toastContainer" class="fixed bottom-5 right-5 z-50 space-y-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+
+  <!-- FOOTER -->
+  <footer class="bg-ukNavyDark text-slate-400 text-xs border-t border-slate-800 mt-12">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-ukEmerald"></span>
+        <span><strong>Praman-Setu (प्रमाण-सेतु)</strong> — Built for PRAYAS 2026 Hackathon (ITDA, Government of Uttarakhand)</span>
+      </div>
+      <div class="text-slate-500">
+        100% Client-Side Privacy Architecture • Zero PII Persistence
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- MODULAR VANILLA JAVASCRIPT ENGINE                                     -->
+  <!-- ===================================================================== -->
+  <script>
+    // -------------------------------------------------------------------------
+    // 1. STATE & STATUTORY RULES REPOSITORY (UTTARAKHAND REVENUE DEPARTMENT)
+    // -------------------------------------------------------------------------
+    let currentLang = 'en';
+    let currentService = 'domicile';
+    let currentScenario = 'A';
+    let currentApplicationId = 'UK-ES-2026-884921';
+    let allFieldsEditable = false;
+
+    const SERVICE_RULES = {
+      domicile: {
+        name: 'Sthayi Niwas Praman Patra (Domicile Certificate)',
+        fee: '₹40.00',
+        timeline: '15 Working Days',
+        checklist: [
+          '15-Year Continuous Residence Proof in Uttarakhand (Bhulekh Khatauni / Electricity / Ration Card)',
+          'Identity Proof (Verified via Masked Token)',
+          'Parivar Register Nakal (परिवार रजिस्टर की नकल)'
+        ]
+      },
+      caste: {
+        name: 'Jati Praman Patra (Caste Certificate)',
+        fee: '₹40.00',
+        timeline: '15 Working Days',
+        checklist: [
+          'Pre-1985 Land / Residence Record or Ancestral Caste Proof (Tehsil Revenue Record)',
+          'Identity Proof (Verified via Masked Token)',
+          'Parivar Register Nakal confirming lineage & caste entry'
+        ]
+      },
+      character: {
+        name: 'Charitra Praman Patra (Character Certificate - General)',
+        fee: '₹40.00',
+        timeline: '10 Working Days',
+        checklist: [
+          'Mandatory ₹30 Police Verification Treasury e-Challan (Account Head 0055-00-800-01-02)',
+          'Identity Proof (Verified via Masked Token)',
+          'Passport Size Photograph & Gram Pradhan / Ward Member Attestation'
+        ]
+      }
+    };
+
+    // Bilingual Dictionary for Dynamic UI Switching
+    const I18N = {
+      en: {
+        gov_uk: 'उत्तराखण्ड शासन | Government of Uttarakhand',
+        itda_tag: 'ITDA PRAYAS 2026 GovTech Prototype',
+        header_subtitle: 'AI Document Verification, Zero-Typing OCR & Automated RTS-1905 Escalation Layer',
+        metric_rejections: 'Desk Rejections',
+        metric_patwari: 'Patwari Scrutiny',
+        metric_1905: '1905 RTS Bridge',
+        tab1_title: 'Citizen Pre-Scrutiny (दस्तावेज़ जाँच)',
+        tab2_title: 'Zero-Typing Form (स्वतः भरा प्रपत्र)',
+        tab3_title: 'Patwari Co-Pilot (पटवारी डैशबोर्ड)',
+        tab4_title: 'RTS Tracker & 1905 Bridge (सेवा का अधिकार)',
+        judge_bar_tag: 'PRAYAS 2026 Jury Pitch — 1-Click Live Scenarios',
+        judge_bar_desc: 'Test how Praman-Setu catches fatal document errors BEFORE the citizen pays the ₹40 CSC/Apuni Sarkar fee:',
+        select_service_lbl: '1. Select Apuni Sarkar Revenue Service (सेवा चुनें)',
+        canvas_lab_title: '2. Live Client-Side Image Quality & Blur Analyzer',
+        canvas_lab_sub: 'Upload any actual .jpg/.png photo or scan from your device. Our offscreen <canvas> computes real pixel brightness & Laplacian edge variance in browser memory.',
+        upload_prompt: 'Click to Upload Real Document Scan (.JPG / .PNG)',
+        audit_panel_title: 'Praman-Setu AI Pre-Scrutiny Engine',
+        audit_panel_sub: 'Cross-verifies OCR entities across Parivar Register, Identity Proof & Revenue Khatauni',
+        entity_matrix_title: 'Cross-Document Entity & Statutory Compliance Check',
+        tab2_banner_heading: 'Apuni Sarkar Step 2 — Auto-Populated from Verified Documents in 1.2 Seconds'
+      },
+      hi: {
+        gov_uk: 'उत्तराखण्ड शासन | सूचना प्रौद्योगिकी विकास एजेंसी (ITDA)',
+        itda_tag: 'प्रयास 2026 हैकथॉन प्रोटोटाइप',
+        header_subtitle: 'एआई दस्तावेज़ पूर्व-जाँच, ज़ीरो-टाइपिंग ओसीआर एवं सीएम हेल्पलाइन 1905 ऑटो-एस्केलेशन सेतु',
+        metric_rejections: 'निरस्तीकरण में कमी',
+        metric_patwari: 'पटवारी जाँच समय',
+        metric_1905: '1905 स्वतः शिकायत',
+        tab1_title: 'दस्तावेज़ पूर्व-जाँच (Pre-Scrutiny)',
+        tab2_title: 'स्वतः भरा प्रपत्र (Zero-Typing Form)',
+        tab3_title: 'पटवारी को-पायलट (Officer View)',
+        tab4_title: 'सेवा का अधिकार एवं 1905 सेतु',
+        judge_bar_tag: 'प्रयास 2026 निर्णायक मंडल डेमो — 1-क्लिक लाइव परिदृश्य',
+        judge_bar_desc: 'देखें कैसे प्रमाण-सेतु ₹40 शुल्क कटने से पहले ही अस्पष्ट दस्तावेज़ और नाम की त्रुटियाँ पकड़ लेता है:',
+        select_service_lbl: '1. अपणि सरकार राजस्व सेवा चुनें (Select Service)',
+        canvas_lab_title: '2. वास्तविक छवि गुणवत्ता एवं धुंधलापन जाँच (Canvas Lab)',
+        canvas_lab_sub: 'अपने फोन या कंप्यूटर से कोई भी .jpg/.png दस्तावेज़ अपलोड करें। ब्राउज़र में ही वास्तविक शार्पनेस और चमक की गणना होगी।',
+        upload_prompt: 'वास्तविक दस्तावेज़ स्कैन अपलोड करने के लिए यहाँ क्लिक करें (.JPG / .PNG)',
+        audit_panel_title: 'प्रमाण-सेतु एआई दस्तावेज़ परीक्षण इंजन',
+        audit_panel_sub: 'परिवार रजिस्टर, पहचान प्रमाण और भूलेख खतौनी के बीच नाम व पते का स्वचालित मिलान',
+        entity_matrix_title: 'अंतर-दस्तावेज़ नाम एवं वैधानिक नियम मिलान तालिका',
+        tab2_banner_heading: 'अपणि सरकार चरण 2 — सत्यापित दस्तावेज़ों से 1.2 सेकंड में स्वतः भरा गया आवेदन पत्र'
+      }
+    };
+
+    // -------------------------------------------------------------------------
+    // 2. LANGUAGE & TAB NAVIGATION CONTROLLERS
+    // -------------------------------------------------------------------------
+    function setLanguage(lang) {
+      currentLang = lang;
+      const btnEN = document.getElementById('langBtnEN');
+      const btnHI = document.getElementById('langBtnHI');
+
+      if (lang === 'en') {
+        btnEN.className = 'px-2 py-0.5 rounded text-xs font-bold bg-ukSaffron text-white transition';
+        btnHI.className = 'px-2 py-0.5 rounded text-xs font-bold text-slate-300 hover:text-white transition';
+      } else {
+        btnHI.className = 'px-2 py-0.5 rounded text-xs font-bold bg-ukSaffron text-white transition';
+        btnEN.className = 'px-2 py-0.5 rounded text-xs font-bold text-slate-300 hover:text-white transition';
+      }
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (I18N[lang][key]) {
+          el.textContent = I18N[lang][key];
+        }
+      });
+
+      showToast(lang === 'hi' ? 'भाषा हिन्दी में बदल दी गई है' : 'Language switched to English', 'info');
+    }
+
+    function switchTab(tabIndex) {
+      for (let i = 1; i <= 4; i++) {
+        const content = document.getElementById(`tabContent${i}`);
+        const btn = document.getElementById(`tabBtn${i}`);
+        const badge = btn.querySelector('span:first-child');
+
+        if (i === tabIndex) {
+          content.classList.remove('hidden');
+          btn.className = 'tab-btn group flex items-center gap-2 py-3 px-4 border-b-4 border-ukSaffron bg-white/10 text-white font-semibold text-xs sm:text-sm whitespace-nowrap transition';
+          badge.className = 'w-5 h-5 rounded-full bg-ukSaffron text-white flex items-center justify-center text-xs font-bold';
+        } else {
+          content.classList.add('hidden');
+          btn.className = 'tab-btn group flex items-center gap-2 py-3 px-4 border-b-4 border-transparent text-slate-300 hover:text-white hover:bg-white/5 font-semibold text-xs sm:text-sm whitespace-nowrap transition';
+          badge.className = 'w-5 h-5 rounded-full bg-slate-700 text-slate-200 flex items-center justify-center text-xs font-bold';
+        }
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      lucide.createIcons();
+    }
+
+    // -------------------------------------------------------------------------
+    // 3. SERVICE SELECTOR & STATUTORY CHECKLIST RENDERER
+    // -------------------------------------------------------------------------
+    function handleServiceChange() {
+      const selector = document.getElementById('serviceSelector');
+      currentService = selector.value;
+      const rule = SERVICE_RULES[currentService];
+
+      document.getElementById('ruleFee').textContent = rule.fee;
+      document.getElementById('ruleTimeline').textContent = rule.timeline;
+
+      const checklistEl = document.getElementById('ruleChecklist');
+      checklistEl.innerHTML = rule.checklist.map(item => `
+        <li class="flex items-start gap-2">
+          <i data-lucide="check-square" class="w-3.5 h-3.5 text-ukEmerald shrink-0 mt-0.5"></i>
+          <span>${item}</span>
+        </li>
+      `).join('');
+
+      // Automatically sync scenario if user selects Character Certificate
+      if (currentService === 'character' && currentScenario !== 'C') {
+        runDemoScenario('B');
+      } else {
+        lucide.createIcons();
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 4. REAL CLIENT-SIDE HTML5 CANVAS BLUR & BRIGHTNESS ANALYZER
+    // -------------------------------------------------------------------------
+    function analyzeUploadedImage(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.getElementById('offscreenCanvas');
+          const ctx = canvas.getContext('2d');
+
+          // Downscale to standard 320px width for fast, deterministic Laplacian variance compute
+          const targetW = 320;
+          const scale = targetW / img.width;
+          const targetH = Math.max(100, Math.floor(img.height * scale));
+          canvas.width = targetW;
+          canvas.height = targetH;
+
+          ctx.drawImage(img, 0, 0, targetW, targetH);
+          const imageData = ctx.getImageData(0, 0, targetW, targetH);
+          const data = imageData.data;
+
+          // 1. Convert to Grayscale & Calculate Mean Luminance
+          const gray = new Float32Array(targetW * targetH);
+          let totalLum = 0;
+
+          for (let i = 0; i < data.length; i += 4) {
+            const r = data[i];
+            const g = data[i + 1];
+            const b = data[i + 2];
+            const lum = 0.299 * r + 0.587 * g + 0.114 * b;
+            gray[i / 4] = lum;
+            totalLum += lum;
+          }
+
+          const avgBrightness = Math.round((totalLum / (targetW * targetH) / 255) * 100);
+
+          // 2. Apply 3x3 Laplacian Kernel [0, 1, 0, 1, -4, 1, 0, 1, 0] to compute Edge Variance
+          let sumLap = 0;
+          let sumLapSq = 0;
+          let count = 0;
+
+          for (let y = 1; y < targetH - 1; y++) {
+            for (let x = 1; x < targetW - 1; x++) {
+              const idx = y * targetW + x;
+              const lap =
+                gray[idx - targetW] +
+                gray[idx - 1] -
+                4 * gray[idx] +
+                gray[idx + 1] +
+                gray[idx + targetW];
+
+              sumLap += lap;
+              sumLapSq += lap * lap;
+              count++;
+            }
+          }
+
+          const meanLap = sumLap / count;
+          const variance = (sumLapSq / count) - (meanLap * meanLap);
+
+          // Normalize variance to a 0-100% human-readable Clarity Score
+          const clarityScore = Math.min(99, Math.max(12, Math.round(Math.sqrt(variance) * 2.1)));
+
+          // Render result in the Live Upload Diagnostics Box
+          document.getElementById('liveUploadResult').classList.remove('hidden');
+          document.getElementById('uploadedPreviewThumb').src = e.target.result;
+          document.getElementById('uploadedFileName').textContent = `${file.name} (${Math.round(file.size / 1024)} KB)`;
+          document.getElementById('realSharpnessVal').textContent = `${clarityScore}% (Var: ${Math.round(variance)})`;
+          document.getElementById('realBrightnessVal').textContent = `${avgBrightness}% Luminance`;
+
+          const verdictEl = document.getElementById('realImageVerdict');
+          if (clarityScore < 45 || avgBrightness < 25) {
+            verdictEl.className = 'text-xs font-bold px-2.5 py-1.5 rounded bg-rose-100 text-rose-800 border border-rose-300 flex items-center gap-1.5';
+            verdictEl.innerHTML = `<i data-lucide="alert-octagon" class="w-4 h-4 shrink-0"></i> <span>Low Clarity (${clarityScore}%) or Dark Scan! Patwari OCR will fail — Please re-scan in daylight.</span>`;
+            showToast(`Blurry/Dark Image Detected (Clarity: ${clarityScore}%)`, 'warning');
+          } else {
+            verdictEl.className = 'text-xs font-bold px-2.5 py-1.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center gap-1.5';
+            verdictEl.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 shrink-0"></i> <span>High OCR Legibility (${clarityScore}% Sharpness, ${avgBrightness}% Brightness) — Ready for Zero-Typing!</span>`;
+            showToast(`Real Image Verified: ${clarityScore}% Clarity Score`, 'success');
+          }
+          lucide.createIcons();
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    // -------------------------------------------------------------------------
+    // 5. THREE 1-CLICK DEMO SCENARIOS FOR LIVE STAGE JUDGING
+    // -------------------------------------------------------------------------
+    function runDemoScenario(scenarioKey) {
+      currentScenario = scenarioKey;
+
+      // Highlight active scenario button
+      const btnA = document.getElementById('btnScenarioA');
+      const btnB = document.getElementById('btnScenarioB');
+      const btnC = document.getElementById('btnScenarioC');
+
+      [btnA, btnB, btnC].forEach(b => b.classList.remove('ring-2', 'ring-white'));
+      if (scenarioKey === 'A') btnA.classList.add('ring-2', 'ring-white');
+      if (scenarioKey === 'B') btnB.classList.add('ring-2', 'ring-white');
+      if (scenarioKey === 'C') btnC.classList.add('ring-2', 'ring-white');
+
+      const docContainer = document.getElementById('documentCardsContainer');
+      const entityBox = document.getElementById('entityComparisonBox');
+      const remediationBox = document.getElementById('remediationBox');
+      const overallBadge = document.getElementById('overallAuditBadge');
+      const entityBadge = document.getElementById('entityConfidenceBadge');
+      const btnProceed = document.getElementById('btnProceedTab2');
+      const feeGateText = document.getElementById('feeGateStatusText');
+
+      if (scenarioKey === 'A') {
+        // SCENARIO A: BLURRY SCAN (34%) + NAME MISMATCH (Ramesh Singh vs Ramesh Chandra)
+        document.getElementById('serviceSelector').value = 'domicile';
+        handleServiceChange();
+
+        overallBadge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1.5';
+        overallBadge.innerHTML = `<i data-lucide="alert-triangle" class="w-4 h-4"></i> <span>2 Fatal Errors Caught Pre-Payment</span>`;
+
+        docContainer.innerHTML = `
+          <!-- Doc 1: Parivar Register (Blurry 34%) -->
+          <div class="p-3.5 rounded-xl border-2 border-amber-400 bg-amber-50/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="eye-off" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-xs font-extrabold text-slate-900">1. Parivar Register Nakal (परिवार रजिस्टर नकल)</span>
+                  <span class="text-[11px] font-extrabold bg-rose-100 text-rose-800 px-2 py-0.5 rounded border border-rose-300">Sharpness: 34% (Blurry Warning)</span>
+                </div>
+                <p class="text-xs text-amber-900 mt-1">
+                  OCR Extracted Name: <strong>"Ramesh Chandra (रमेश चन्द्र)"</strong> — Low Laplacian edge contrast detected on stamp area.
+                </p>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-amber-800 bg-white px-2.5 py-1 rounded border border-amber-300 shrink-0">Re-Scan Needed</span>
+          </div>
+
+          <!-- Doc 2: Identity Proof -->
+          <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-ukEmerald text-white flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-xs font-extrabold text-slate-900">2. Identity Proof ([Aadhaar Redacted])</span>
+                  <span class="text-[11px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Sharpness: 96% (Crisp)</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-1">
+                  OCR Extracted Name: <strong>"Ramesh Singh (रमेश सिंह)"</strong> | S/O: <strong>Mohan Singh</strong>
+                </p>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-ukEmerald bg-white px-2.5 py-1 rounded border border-emerald-200 shrink-0">Clarity OK</span>
+          </div>
+
+          <!-- Doc 3: 15-Year Residence Proof -->
+          <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-ukEmerald text-white flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-xs font-extrabold text-slate-900">3. Bhulekh Khatauni (15-Year Domicile Proof)</span>
+                  <span class="text-[11px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">24 Years Verified</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-1">
+                  Mauza Herbertpur, Tehsil Vikasnagar (Fasli 1409–1430) — Exceeds 15-year statutory rule.
+                </p>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-ukEmerald bg-white px-2.5 py-1 rounded border border-emerald-200 shrink-0">Rule Passed</span>
+          </div>
+        `;
+
+        entityBadge.className = 'text-xs font-bold text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded border border-amber-300';
+        entityBadge.textContent = 'Entity Match: 64% (Surname Conflict)';
+
+        entityBox.innerHTML = `
+          <div class="flex items-center justify-between py-1.5 border-b border-slate-200">
+            <span class="font-bold text-slate-700">Identity Proof Name:</span>
+            <span class="font-bold text-ukNavy">Ramesh <span class="bg-amber-200 px-1 rounded">Singh</span> (रमेश सिंह)</span>
+          </div>
+          <div class="flex items-center justify-between py-1.5 border-b border-slate-200">
+            <span class="font-bold text-slate-700">Parivar Register Name:</span>
+            <span class="font-bold text-rose-700">Ramesh <span class="bg-rose-200 px-1 rounded">Chandra</span> (रमेश चन्द्र)</span>
+          </div>
+          <div class="flex items-center justify-between py-1">
+            <span class="font-bold text-slate-700">Patwari Rejection Risk:</span>
+            <span class="font-extrabold text-rose-600">94% Guaranteed Rejection under "Name Discrepancy"</span>
+          </div>
+        `;
+
+        remediationBox.className = 'mt-5 p-4 rounded-xl border-2 border-amber-400 bg-amber-50/90 text-amber-950 space-y-3';
+        remediationBox.innerHTML = `
+          <div class="flex items-start gap-2.5">
+            <i data-lucide="shield-alert" class="w-5 h-5 text-ukSaffron shrink-0 mt-0.5"></i>
+            <div>
+              <h5 class="text-xs sm:text-sm font-extrabold">Inline Remediation Required: Upload One-and-Same Person Affidavit or Re-Scan</h5>
+              <p class="text-xs text-amber-900 mt-0.5">
+                Praman-Setu blocked the ₹40 fee payment to save your money. Because <strong>"Ramesh Singh"</strong> and <strong>"Ramesh Chandra"</strong> differ across documents, please attach a ₹10 Notary Affidavit or click <strong>Scenario C (Happy Path)</strong> above to simulate uploading a corrected scan.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <button onclick="runDemoScenario('C')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-ukNavy text-white hover:bg-slate-800 flex items-center gap-1.5">
+              <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+              <span>Simulate Re-Scan & Attach Affidavit (Jump to Happy Path)</span>
+            </button>
+          </div>
+        `;
+
+        btnProceed.disabled = true;
+        btnProceed.className = 'w-full sm:w-auto px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition bg-slate-200 text-slate-500 cursor-not-allowed';
+        feeGateText.textContent = '₹40 Apuni Sarkar Fee Payment Locked to prevent citizen money loss.';
+
+      } else if (scenarioKey === 'B') {
+        // SCENARIO B: CHARACTER CERTIFICATE MISSING MANDATORY ₹30 POLICE CHALLAN (HEAD 0055)
+        document.getElementById('serviceSelector').value = 'character';
+        handleServiceChange();
+
+        overallBadge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-900 border border-rose-300 flex items-center gap-1.5';
+        overallBadge.innerHTML = `<i data-lucide="x-octagon" class="w-4 h-4"></i> <span>Missing Mandatory Statutory Proof</span>`;
+
+        docContainer.innerHTML = `
+          <!-- Doc 1: Missing Police e-Challan Head 0055 -->
+          <div class="p-3.5 rounded-xl border-2 border-rose-500 bg-rose-50/70 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-rose-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="file-x" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-xs font-extrabold text-rose-950">1. ₹30 Police Treasury e-Challan (Head 0055-00-800-01-02)</span>
+                  <span class="text-[11px] font-extrabold bg-rose-200 text-rose-900 px-2 py-0.5 rounded">MISSING STATUTORY PROOF</span>
+                </div>
+                <p class="text-xs text-rose-900 mt-1">
+                  Applicant uploaded a plain white self-declaration instead of the mandatory IFMS Uttarakhand Cyber Treasury receipt under Head 0055.
+                </p>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-rose-800 bg-white px-2.5 py-1 rounded border border-rose-300 shrink-0">Fatal Omission</span>
+          </div>
+
+          <!-- Doc 2: Identity Proof -->
+          <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-lg bg-ukEmerald text-white flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-xs font-extrabold text-slate-900">2. Identity Proof ([Aadhaar Redacted]) & Passport Photo</span>
+                <p class="text-xs text-slate-600 mt-1">Sharpness: 95% | Entity: Ramesh Singh (रमेश सिंह)</p>
+              </div>
+            </div>
+            <span class="text-xs font-bold text-ukEmerald bg-white px-2.5 py-1 rounded border border-emerald-200 shrink-0">Verified</span>
+          </div>
+        `;
+
+        entityBadge.className = 'text-xs font-bold text-rose-800 bg-rose-100 px-2.5 py-0.5 rounded border border-rose-300';
+        entityBadge.textContent = 'Statutory Rule Check: FAILED (Head 0055 Missing)';
+
+        entityBox.innerHTML = `
+          <div class="flex items-center justify-between py-1.5 border-b border-slate-200">
+            <span class="font-bold text-slate-700">Service Selected:</span>
+            <span class="font-bold text-ukNavy">Charitra Praman Patra (General Character Certificate)</span>
+          </div>
+          <div class="flex items-center justify-between py-1.5 border-b border-slate-200">
+            <span class="font-bold text-slate-700">Treasury Head 0055 OCR Check:</span>
+            <span class="font-extrabold text-rose-700">Not Found in Uploaded PDF</span>
+          </div>
+          <div class="flex items-center justify-between py-1">
+            <span class="font-bold text-slate-700">Impact Saved:</span>
+            <span class="font-extrabold text-ukEmerald">Prevented a guaranteed 10-day Police/DM Desk Rejection</span>
+          </div>
+        `;
+
+        remediationBox.className = 'mt-5 p-4 rounded-xl border-2 border-rose-400 bg-rose-50 text-rose-950 space-y-3';
+        remediationBox.innerHTML = `
+          <div class="flex items-start gap-2.5">
+            <i data-lucide="alert-octagon" class="w-5 h-5 text-rose-600 shrink-0 mt-0.5"></i>
+            <div>
+              <h5 class="text-xs sm:text-sm font-extrabold">Blocked: Mandatory ₹30 Police e-Challan (Head 0055) Missing</h5>
+              <p class="text-xs text-rose-900 mt-0.5">
+                Without the ₹30 Police Verification Challan receipt, your application is guaranteed to be rejected after 10 days. Generate the challan or test Scenario C to proceed.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-1">
+            <button onclick="runDemoScenario('C')" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-ukEmerald text-white hover:bg-emerald-700 flex items-center gap-1.5">
+              <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+              <span>Attach Verified Challan & Run Scenario C (Happy Path)</span>
+            </button>
+          </div>
+        `;
+
+        btnProceed.disabled = true;
+        btnProceed.className = 'w-full sm:w-auto px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition bg-slate-200 text-slate-500 cursor-not-allowed';
+        feeGateText.textContent = '₹40 Apuni Sarkar Fee Payment Locked until Head 0055 e-Challan is attached.';
+
+      } else if (scenarioKey === 'C') {
+        // SCENARIO C: HAPPY PATH WITH SMOOTH 1.5-SECOND AI AUDIT PROGRESS BAR
+        document.getElementById('serviceSelector').value = 'domicile';
+        handleServiceChange();
+
+        const progContainer = document.getElementById('auditProgressContainer');
+        const progBar = document.getElementById('auditProgressBar');
+        const progPct = document.getElementById('auditProgressPct');
+        const progText = document.getElementById('auditProgressText');
+
+        progContainer.classList.remove('hidden');
+        progBar.style.width = '0%';
+        progPct.textContent = '0%';
+
+        const steps = [
+          { pct: 28, msg: 'Computing Laplacian Sharpness on Parivar Register...' },
+          { pct: 64, msg: 'Running Bilingual Devanagari OCR Entity Resolution...' },
+          { pct: 92, msg: 'Verifying 15-Year Domicile Rule with Bhulekh Khatauni...' },
+          { pct: 100, msg: 'All Statutory & Clarity Checks Passed (97% Confidence)!' }
+        ];
+
+        let stepIdx = 0;
+        const interval = setInterval(() => {
+          if (stepIdx < steps.length) {
+            progBar.style.width = steps[stepIdx].pct + '%';
+            progPct.textContent = steps[stepIdx].pct + '%';
+            progText.textContent = steps[stepIdx].msg;
+            stepIdx++;
+          } else {
+            clearInterval(interval);
+            setTimeout(() => {
+              progContainer.classList.add('hidden');
+              renderHappyPathSuccess();
+            }, 250);
+          }
+        }, 340);
+      }
+
+      lucide.createIcons();
+    }
+
+    function renderHappyPathSuccess() {
+      const docContainer = document.getElementById('documentCardsContainer');
+      const entityBox = document.getElementById('entityComparisonBox');
+      const remediationBox = document.getElementById('remediationBox');
+      const overallBadge = document.getElementById('overallAuditBadge');
+      const entityBadge = document.getElementById('entityConfidenceBadge');
+      const btnProceed = document.getElementById('btnProceedTab2');
+      const feeGateText = document.getElementById('feeGateStatusText');
+
+      overallBadge.className = 'px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-900 border border-emerald-400 flex items-center gap-1.5';
+      overallBadge.innerHTML = `<i data-lucide="check-circle-2" class="w-4 h-4 text-ukEmerald"></i> <span>All Checks Passed (97% Clarity)</span>`;
+
+      docContainer.innerHTML = `
+        <div class="p-3.5 rounded-xl border-2 border-ukEmerald bg-emerald-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-lg bg-ukEmerald text-white flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="file-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-xs font-extrabold text-slate-900">1. Parivar Register Nakal (ग्राम हरबर्टपुर, विकासनगर)</span>
+                <span class="text-[11px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Sharpness: 97%</span>
+              </div>
+              <p class="text-xs text-slate-700 mt-1">
+                Extracted: <strong>Ramesh Singh (रमेश सिंह)</strong> | Father: <strong>Mohan Singh (मोहन सिंह)</strong>
+              </p>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-ukEmerald bg-white px-2.5 py-1 rounded border border-emerald-300 shrink-0">✓ Verified</span>
+        </div>
+
+        <div class="p-3.5 rounded-xl border-2 border-ukEmerald bg-emerald-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-lg bg-ukEmerald text-white flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-xs font-extrabold text-slate-900">2. Identity Proof ([Aadhaar Redacted])</span>
+                <span class="text-[11px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">Sharpness: 98%</span>
+              </div>
+              <p class="text-xs text-slate-700 mt-1">
+                100% Entity Match with Parivar Register | DOB: <strong>15/07/1988</strong>
+              </p>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-ukEmerald bg-white px-2.5 py-1 rounded border border-emerald-300 shrink-0">✓ Verified</span>
+        </div>
+
+        <div class="p-3.5 rounded-xl border-2 border-ukEmerald bg-emerald-50/50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 rounded-lg bg-ukEmerald text-white flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="landmark" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-xs font-extrabold text-slate-900">3. Bhulekh Khatauni (15-Year Statutory Residence Proof)</span>
+                <span class="text-[11px] font-bold bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded">24 Years Continuous</span>
+              </div>
+              <p class="text-xs text-slate-700 mt-1">
+                Khata No. 00142, Khasra 418/2, Tehsil Vikasnagar — Jurisdiction Auto-Locked.
+              </p>
+            </div>
+          </div>
+          <span class="text-xs font-bold text-ukEmerald bg-white px-2.5 py-1 rounded border border-emerald-300 shrink-0">✓ Verified</span>
+        </div>
+      `;
+
+      entityBadge.className = 'text-xs font-bold text-ukEmerald bg-emerald-100 px-2.5 py-0.5 rounded border border-emerald-300';
+      entityBadge.textContent = 'Entity Match: 99.4% (Verified Across All 3 Docs)';
+
+      entityBox.innerHTML = `
+        <div class="flex items-center justify-between py-1.5 border-b border-slate-200">
+          <span class="font-bold text-slate-700">Bilingual Name Resolution:</span>
+          <span class="font-bold text-ukEmerald">Ramesh Singh ⇄ रमेश सिंह (100% Match)</span>
+        </div>
+        <div class="flex items-center justify-between py-1.5 border-b border-slate-200">
+          <span class="font-bold text-slate-700">Statutory 15-Year Domicile Check:</span>
+          <span class="font-bold text-ukEmerald">24 Years Verified (Fasli 1409–1430)</span>
+        </div>
+        <div class="flex items-center justify-between py-1">
+          <span class="font-bold text-slate-700">Zero-Typing OCR Payload:</span>
+          <span class="font-extrabold text-ukNavy">8/8 Fields Extracted & Ready for Form Auto-Fill</span>
+        </div>
+      `;
+
+      remediationBox.className = 'mt-5 p-4 rounded-xl border-2 border-ukEmerald bg-emerald-50 text-emerald-950';
+      remediationBox.innerHTML = `
+        <div class="flex items-center justify-between flex-wrap gap-3">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="sparkles" class="w-5 h-5 text-ukEmerald shrink-0"></i>
+            <div>
+              <h5 class="text-xs sm:text-sm font-extrabold">Pre-Scrutiny Passed! Zero-Typing Form Ready</h5>
+              <p class="text-xs text-emerald-800">All fields have been extracted in English & Hindi Unicode. Click the glowing green button below.</p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      btnProceed.disabled = false;
+      btnProceed.className = 'w-full sm:w-auto px-6 py-3 rounded-xl font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 transition bg-ukEmerald hover:bg-emerald-700 text-white shadow-lg pulse-glow cursor-pointer';
+      feeGateText.textContent = 'Pre-Scrutiny Token Generated — Safe to proceed to Zero-Typing Form.';
+
+      showToast('All 3 Documents Passed AI Scrutiny (97% Clarity)!', 'success');
+      lucide.createIcons();
+    }
+
+    // -------------------------------------------------------------------------
+    // 6. TAB 2: ZERO-TYPING FORM EDIT TOGGLES & APPLICATION SUBMISSION
+    // -------------------------------------------------------------------------
+    function toggleSingleField(fieldId) {
+      const input = document.getElementById(fieldId);
+      if (!input) return;
+      input.readOnly = !input.readOnly;
+      if (!input.readOnly) {
+        input.focus();
+        showToast('Field unlocked for manual editing', 'info');
+      } else {
+        showToast('Field locked with OCR verification', 'success');
+      }
+    }
+
+    function toggleAllFormFields() {
+      allFieldsEditable = !allFieldsEditable;
+      const inputs = document.querySelectorAll('.ocr-input');
+      inputs.forEach(inp => {
+        inp.readOnly = !allFieldsEditable;
+      });
+      document.getElementById('globalEditBtnText').textContent = allFieldsEditable
+        ? 'Lock All OCR Fields'
+        : 'Unlock All Fields to Edit';
+      showToast(allFieldsEditable ? 'All fields unlocked for editing' : 'All fields locked', 'info');
+    }
+
+    function submitApplicationAndPay() {
+      const randomSix = Math.floor(100000 + Math.random() * 900000);
+      currentApplicationId = `UK-ES-2026-${randomSix}`;
+
+      document.getElementById('officerAppId').textContent = currentApplicationId;
+      document.getElementById('trackerAppId').textContent = currentApplicationId;
+      document.getElementById('modalAppId').textContent = currentApplicationId;
+
+      showToast(`₹40 Paid! Application ${currentApplicationId} Generated`, 'success');
+      setTimeout(() => {
+        switchTab(4);
+      }, 650);
+    }
+
+    // -------------------------------------------------------------------------
+    // 7. TAB 3: PATWARI 1-CLICK APPROVAL
+    // -------------------------------------------------------------------------
+    function approveAndForwardPatwari() {
+      const btn = document.getElementById('btnPatwariApprove');
+      const banner = document.getElementById('patwariApprovedBanner');
+      btn.classList.add('opacity-60', 'cursor-not-allowed');
+      btn.disabled = true;
+      btn.innerHTML = `<i data-lucide="check-check" class="w-5 h-5"></i> <span>Approved & e-Signed in 28 Seconds!</span>`;
+      banner.classList.remove('hidden');
+      showToast('Patwari Report e-Signed & Forwarded to Tehsildar Desk!', 'success');
+      lucide.createIcons();
+    }
+
+    // -------------------------------------------------------------------------
+    // 8. TAB 4: RTS TRACKER & CM HELPLINE 1905 ESCALATION MODAL
+    // -------------------------------------------------------------------------
+    function setRtsDemoMode(mode) {
+      const slaBadge = document.getElementById('rtsSlaBadge');
+      const step3Card = document.getElementById('step3Card');
+      const step3Icon = document.getElementById('step3Icon');
+      const step3Badge = document.getElementById('step3Badge');
+      const step3Desc = document.getElementById('step3Desc');
+      const btnBreached = document.getElementById('btnRtsBreached');
+      const btnOntime = document.getElementById('btnRtsOntime');
+
+      if (mode === 'breached') {
+        btnBreached.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-rose-600 text-white shadow-sm flex items-center gap-1.5';
+        btnOntime.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-300 flex items-center gap-1.5';
+
+        slaBadge.className = 'text-xs font-extrabold px-3 py-0.5 rounded-full bg-rose-100 text-rose-800 border border-rose-300 flex items-center gap-1 animate-pulse';
+        slaBadge.innerHTML = `<i data-lucide="flame" class="w-3.5 h-3.5"></i> Day 16 of 15 — RTS SLA Breached (1 Day Overdue)`;
+
+        step3Card.className = 'p-4 rounded-xl bg-rose-50 border-2 border-rose-500 relative shadow-sm';
+        step3Icon.className = 'w-7 h-7 rounded-full bg-rose-600 text-white font-bold text-xs flex items-center justify-center';
+        step3Icon.textContent = '!';
+        step3Badge.className = 'text-[11px] font-extrabold text-rose-700 bg-rose-100 px-2 py-0.5 rounded';
+        step3Badge.textContent = 'Pending 13 Days (SLA Breach)';
+        step3Desc.className = 'text-xs text-rose-900 font-medium mt-1';
+        step3Desc.textContent = 'File stuck at Kanungo Circle Vikasnagar Desk beyond 15-day statutory limit.';
+      } else {
+        btnOntime.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-ukEmerald text-white shadow-sm flex items-center gap-1.5';
+        btnBreached.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-300 flex items-center gap-1.5';
+
+        slaBadge.className = 'text-xs font-extrabold px-3 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center gap-1';
+        slaBadge.innerHTML = `<i data-lucide="clock" class="w-3.5 h-3.5"></i> Day 2 of 15 — Within RTS Statutory Timeline`;
+
+        step3Card.className = 'p-4 rounded-xl bg-amber-50 border-2 border-amber-400 relative shadow-sm';
+        step3Icon.className = 'w-7 h-7 rounded-full bg-amber-500 text-white font-bold text-xs flex items-center justify-center';
+        step3Icon.textContent = '3';
+        step3Badge.className = 'text-[11px] font-extrabold text-amber-800 bg-amber-100 px-2 py-0.5 rounded';
+        step3Badge.textContent = 'In Progress (Day 2)';
+        step3Desc.className = 'text-xs text-slate-700 font-medium mt-1';
+        step3Desc.textContent = 'Queued at Kanungo Circle Vikasnagar Desk — 13 working days remaining in SLA.';
+      }
+      lucide.createIcons();
+    }
+
+    function open1905Modal() {
+      document.getElementById('modal1905').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function close1905Modal() {
+      document.getElementById('modal1905').classList.add('hidden');
+    }
+
+    function confirm1905Ticket() {
+      close1905Modal();
+      const ticketBox = document.getElementById('generated1905TicketBox');
+      ticketBox.classList.remove('hidden');
+      showToast('CM Helpline 1905 Grievance Ticket 1905-UK-2026-44109 Generated!', 'success');
+      ticketBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      lucide.createIcons();
+    }
+
+    // -------------------------------------------------------------------------
+    // 9. TOAST NOTIFICATION HELPER
+    // -------------------------------------------------------------------------
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+
+      let bgClass = 'bg-ukNavy border-slate-700 text-white';
+      let iconName = 'info';
+
+      if (type === 'success') {
+        bgClass = 'bg-emerald-900 border-emerald-500 text-white';
+        iconName = 'check-circle-2';
+      } else if (type === 'warning') {
+        bgClass = 'bg-amber-900 border-amber-500 text-white';
+        iconName = 'alert-triangle';
+      }
+
+      toast.className = `pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-xl border ${bgClass} text-xs font-bold transition-all duration-300`;
+      toast.innerHTML = `
+        <i data-lucide="${iconName}" class="w-4 h-4 shrink-0 text-amber-400"></i>
+        <span>${message}</span>
+      `;
+
+      container.appendChild(toast);
+      lucide.createIcons();
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+
+    // -------------------------------------------------------------------------
+    // 10. INITIALIZE PROTOTYPE ON DOM LOAD
+    // -------------------------------------------------------------------------
+    window.addEventListener('DOMContentLoaded', () => {
+      handleServiceChange();
+      runDemoScenario('A'); // Start on Scenario A so judges immediately see error prevention
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
